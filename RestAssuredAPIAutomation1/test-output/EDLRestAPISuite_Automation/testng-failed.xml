@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [EDLRestAPISuite_Automation]">
+  <listeners>
+    <listener class-name="com.edlapi.utilities.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="EDLAPITesting_TestCases(failed)">
+    <classes>
+      <class name="com_edl_api_testcases.TC006_shareclasses_id">
+        <methods>
+          <include name="tearDown"/>
+          <include name="ExtractallData"/>
+          <include name="getShareClassdetails"/>
+          <include name="checkStatusCode"/>
+          <include name="setup"/>
+          <include name="checkResponseBody"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC006_shareclasses_id -->
+      <class name="com_edl_api_testcases.TC009_shareclasses_id_perf_rolling">
+        <methods>
+          <include name="checkResponseBody"/>
+          <include name="checkStatusCode"/>
+          <include name="setup"/>
+          <include name="ExtractallData"/>
+          <include name="tearDown"/>
+          <include name="shareclasses_id_perf_rolling"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC009_shareclasses_id_perf_rolling -->
+      <class name="com_edl_api_testcases.TC0011_shareclasses_id_syn_Riskindicator">
+        <methods>
+          <include name="ExtractallData"/>
+          <include name="tearDown"/>
+          <include name="shareclasses_id_syn_Riskindicator"/>
+          <include name="checkStatusCode"/>
+          <include name="setup"/>
+          <include name="checkResponseBody"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC0011_shareclasses_id_syn_Riskindicator -->
+      <class name="com_edl_api_testcases.TC007_shareclasses_id_NAV">
+        <methods>
+          <include name="checkStatusCode"/>
+          <include name="ExtractallData"/>
+          <include name="tearDown"/>
+          <include name="checkResponseBody"/>
+          <include name="getShareclassdetail"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC007_shareclasses_id_NAV -->
+      <class name="com_edl_api_testcases.TC008_shareclasses_id_perf_standard">
+        <methods>
+          <include name="ExtractallData"/>
+          <include name="tearDown"/>
+          <include name="checkStatusCode"/>
+          <include name="setup"/>
+          <include name="checkResponseBody"/>
+          <include name="getshareclass_perf_standard"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC008_shareclasses_id_perf_standard -->
+      <class name="com_edl_api_testcases.TC0010_shareclasses_id_perf_growth">
+        <methods>
+          <include name="checkStatusCode"/>
+          <include name="checkResponseBody"/>
+          <include name="ExtractallData"/>
+          <include name="setup"/>
+          <include name="shareclasses_id_perf_growth"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC0010_shareclasses_id_perf_growth -->
+      <class name="com_edl_api_testcases.TC0013_shareclasses_id_ratings">
+        <methods>
+          <include name="checkStatusCode"/>
+          <include name="shareclasses_id_ratings"/>
+          <include name="checkResponseBody"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC0013_shareclasses_id_ratings -->
+      <class name="com_edl_api_testcases.TC004_accounts_id_analystics">
+        <methods>
+          <include name="getaccountsanalytics"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="checkStatusCode"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC004_accounts_id_analystics -->
+      <class name="com_edl_api_testcases.TC0012_shareclasses_id_rankings">
+        <methods>
+          <include name="checkStatusCode"/>
+          <include name="checkResponseBody"/>
+          <include name="ExtractallData"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="shareclasses_id_rankings"/>
+        </methods>
+      </class> <!-- com_edl_api_testcases.TC0012_shareclasses_id_rankings -->
+    </classes>
+  </test> <!-- EDLAPITesting_TestCases(failed) -->
+</suite> <!-- Failed suite [EDLRestAPISuite_Automation] -->
