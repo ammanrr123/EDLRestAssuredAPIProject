@@ -19,7 +19,7 @@ public class PerfStandard {
 		int count=1;
 		JSONParser parser = new JSONParser();
 		//JsonParser to convert JSON string into Json Object
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\Test_Case_Validation.xlsx";
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\Test_Case_Validation.xlsx";
 		XLUtil.setExcelFile(path);
 
 		int rowcount=XLUtil.getRowCount(path, "Perf_Stan_URLs");

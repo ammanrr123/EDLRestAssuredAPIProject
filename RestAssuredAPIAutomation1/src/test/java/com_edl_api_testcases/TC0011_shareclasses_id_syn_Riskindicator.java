@@ -16,15 +16,15 @@ import com_edl_api_testing.TestBase;
 import io.restassured.RestAssured;
 
 public class TC0011_shareclasses_id_syn_Riskindicator extends TestBase {
-	String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
+	String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
 	@BeforeClass
 	void shareclasses_id_syn_Riskindicator() throws Exception
 	{
 		logger.info("*******Started TC0011_shareclasses_id_syn_Riskindicator*****");
 		//Response response;
 		
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
-		XLUtil.setExcelFile("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
+		XLUtil.setExcelFile("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
 		String s1=XLUtil.getCellData(path, "Sheet1", 13, 2);
 	
 		String s3=XLUtil.getCellData(path, "Sheet1", 13, 3);
@@ -54,7 +54,7 @@ public class TC0011_shareclasses_id_syn_Riskindicator extends TestBase {
 		XLUtil.setCellData(path, "Sheet4", row, 7, responseString);
 		try {
 			String s5=s2+RestUtils.empName();
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"srri.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"srri.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();
@@ -92,7 +92,7 @@ public class TC0011_shareclasses_id_syn_Riskindicator extends TestBase {
 		String responseString=response.asString();
 		//XLUtil.setCellData(path, "Sheet3", 11, 1, responseString);
 		try {
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc11.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc11.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();

@@ -21,7 +21,7 @@ public class JsonRead {
 		
 		JSONParser parser = new JSONParser();
 		//JsonParser to convert JSON string into Json Object
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\Test_Case_Validation.xlsx";
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\Test_Case_Validation.xlsx";
 		XLUtil.setExcelFile(path);
 
 		int rowcount=XLUtil.getRowCount(path, "ShareClassURLs");
@@ -29,7 +29,7 @@ public class JsonRead {
 			
 		{
 		try {
-			//Object obj = parser.parse(new FileReader("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\09TBEQQQXXSCETFACCcshareclass.json"));
+			//Object obj = parser.parse(new FileReader("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\09TBEQQQXXSCETFACCcshareclass.json"));
 			
 			Object obj = parser.parse(new FileReader(XLUtil.getCellData(path, "ShareClassURLs", row, 0)));
 			//parsing the JSON string inside the file that we created earlier.

@@ -20,15 +20,15 @@ import io.restassured.RestAssured;
 
 //import com_edl_api_testing.TestBase;
 public class TC001_accounts_id extends TestBase {
-	String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
+	String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
 	@BeforeClass
 	void getallaccounts() throws Exception
 	{
 		logger.info("*******Started TC001_getaccounts_id*****");
 		//Response response;
 		
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
-		XLUtil.setExcelFile("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
+		XLUtil.setExcelFile("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
 		
 		
 		String s1=XLUtil.getCellData(path, "Sheet1", 3, 2);
@@ -61,7 +61,7 @@ public class TC001_accounts_id extends TestBase {
 		XLUtil.setCellData(path, "Sheet2", row, 2, responseString);
 		try {
 			String s5=s2+RestUtils.empName();
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"_Account.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"_Account.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();
@@ -100,7 +100,7 @@ public class TC001_accounts_id extends TestBase {
 		String responseString=response.asString();
 	
 		try {
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc1.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc1.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();

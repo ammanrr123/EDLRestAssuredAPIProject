@@ -24,13 +24,13 @@ public class CharJsonRead {
 			
 		{
 		try {
-			String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\Test_Case_Validation.xlsx";
+			String path="C:\\Users\\ammanrr\\eclipse-workspace\\Test_Case_Validation.xlsx";
 			XLUtil.setExcelFile(path);
 		System.out.println("started extracting the Shareclass json files");
 
 			int rowcount=XLUtil.getRowCount(path, "ShareClassURLs");
 			for(int row=1;row<=rowcount;row++) {
-			//Object obj = parser.parse(new FileReader("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\09TBEQQQXXSCETFACCcshareclass.json"));
+			//Object obj = parser.parse(new FileReader("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\09TBEQQQXXSCETFACCcshareclass.json"));
 			
 			Object obj = parser.parse(new FileReader(XLUtil.getCellData(path, "ShareClassURLs", row, 0)));
 			//parsing the JSON string inside the file that we created earlier.
@@ -115,12 +115,12 @@ public class CharJsonRead {
 		try {
 			
 			System.out.println("Started extracting the Analystics json files");
-			String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\Test_Case_Validation.xlsx";
+			String path="C:\\Users\\ammanrr\\eclipse-workspace\\Test_Case_Validation.xlsx";
 			XLUtil.setExcelFile(path);
 			int rowcount=XLUtil.getRowCount(path, "AnalysticsURLs");
 			
 			for(int Arow=1;Arow<=rowcount;Arow++) {
-			//Object obj = parser.parse(new FileReader("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\09TBEQQQXXSCETFACCcshareclass.json"));
+			//Object obj = parser.parse(new FileReader("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\09TBEQQQXXSCETFACCcshareclass.json"));
 			
 				int ccol=Arow+2;
 			
@@ -237,7 +237,7 @@ public class CharJsonRead {
 			e.printStackTrace();
 		} 
 		try {
-			String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\Test_Case_Validation.xlsx";
+			String path="C:\\Users\\ammanrr\\eclipse-workspace\\Test_Case_Validation.xlsx";
 			XLUtil.setExcelFile(path);
 			System.out.println("Started extracting the Shareclass Nav json files");
 			int rowcount=XLUtil.getRowCount(path, "Share_NAVURLS");

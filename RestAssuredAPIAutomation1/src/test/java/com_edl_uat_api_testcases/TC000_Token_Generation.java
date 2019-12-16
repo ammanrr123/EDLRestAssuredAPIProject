@@ -22,8 +22,8 @@ public class TC000_Token_Generation {
 	void RegisteredSuccesful() throws Exception
 	{
 		//specify base url
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
-		//XLUtil.setExcelFile("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
+		//XLUtil.setExcelFile("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
 		RestAssured.baseURI="https://login.microsoftonline.com/c73bf3ef-87e9-48e0-ac85-9c723e6cca39/oauth2/token";
 		
 		//Request object
@@ -56,7 +56,7 @@ public class TC000_Token_Generation {
 			XLUtil.setCellData(path, "Token", 1, 1, responsebody);
 			try {
 				
-				PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"_Extract.json"));
+				PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"_Extract.json"));
 				out.print(responsebody);
 				out.flush();
 				out.close();
@@ -65,7 +65,7 @@ public class TC000_Token_Generation {
 			catch(Exception e) {
 				System.out.println("no file found");
 			}
-			XLUtil.setCellData(path, "Token", 1, 2, "C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"_Extract.json");
+			XLUtil.setCellData(path, "Token", 1, 2, "C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"_Extract.json");
 		}else {
 				XLUtil.setCellData(path, "Token", 1, 0, "404 Error");
 			}

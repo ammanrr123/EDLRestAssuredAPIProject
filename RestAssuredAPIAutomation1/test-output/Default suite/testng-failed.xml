@@ -3,14 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com_edl_uat_api_testcases.TC0010_shareclasses_id_perf_growth">
+      <class name="com_edl_uat_api_testcases.TC001_accounts_id">
         <methods>
+          <include name="getallaccounts"/>
+          <include name="checkResponseBody"/>
           <include name="checkStatusCode"/>
           <include name="setup"/>
-          <include name="shareclasses_id_perf_growth"/>
           <include name="tearDown"/>
+          <include name="ExtractallData"/>
         </methods>
-      </class> <!-- com_edl_uat_api_testcases.TC0010_shareclasses_id_perf_growth -->
+      </class> <!-- com_edl_uat_api_testcases.TC001_accounts_id -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,15 +16,15 @@ import com_edl_api_testing.TestBase;
 import io.restassured.RestAssured;
 
 public class TC0010_shareclasses_id_perf_growth extends TestBase {
-	String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
+	String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
 	@BeforeClass
 	void shareclasses_id_perf_growth() throws Exception
 	{
 		logger.info("*******Started TC0010_shareclasses_id_perf_growth*****");
 		//Response response;
 		
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
-		XLUtil.setExcelFile("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
+		XLUtil.setExcelFile("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
 		String s1=XLUtil.getCellData(path, "Sheet1", 12, 2);
 		
 		String s3=XLUtil.getCellData(path, "Sheet1", 12, 3);
@@ -54,7 +54,7 @@ public class TC0010_shareclasses_id_perf_growth extends TestBase {
 			System.out.println("Success API URL:"+s4);
 		try {
 			String s5=s2+RestUtils.empName();
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"share_perf_growth.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"share_perf_growth.json"));
 			XLUtil.setCellData(path, "Sheet4", row, 6, "pass");
 			out.print(responseString);
 			out.flush();
@@ -94,7 +94,7 @@ public class TC0010_shareclasses_id_perf_growth extends TestBase {
 		String responseString=response.asString();
 		//XLUtil.setCellData(path, "Sheet3", 10, 1, responseString);
 		try {
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc10.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc10.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();

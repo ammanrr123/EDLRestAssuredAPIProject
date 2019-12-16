@@ -16,15 +16,15 @@ import com_edl_api_testing.TestBase;
 import io.restassured.RestAssured;
 
 public class TC007_shareclasses_id_NAV extends TestBase {
-	String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
+	String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
 	@BeforeClass
 	void getShareclassdetail() throws Exception
 	{
 		logger.info("*******Started TC007_getShareclassdetail*****");
 		//Response response;
 		
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
-		XLUtil.setExcelFile("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
+		XLUtil.setExcelFile("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
 		String s1=XLUtil.getCellData(path, "Sheet1", 9, 2);
 		
 		String s3=XLUtil.getCellData(path, "Sheet1", 9, 3);
@@ -53,7 +53,7 @@ public class TC007_shareclasses_id_NAV extends TestBase {
 		XLUtil.setCellData(path, "Sheet4", row, 3, responseString);
 		try {
 			String s5=s2+RestUtils.empName();
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"NAV.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"NAV.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();
@@ -91,7 +91,7 @@ public class TC007_shareclasses_id_NAV extends TestBase {
 		String responseString=response.asString();
 	//	XLUtil.setCellData(path, "Sheet3", 7, 1, responseString);
 		try {
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc7.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc7.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();

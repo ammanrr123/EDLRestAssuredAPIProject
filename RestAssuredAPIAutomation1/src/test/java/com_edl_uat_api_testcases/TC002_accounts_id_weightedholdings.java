@@ -21,14 +21,14 @@ import io.restassured.RestAssured;
 
 public class TC002_accounts_id_weightedholdings extends TestBase {
 	
-	String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
+	String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
 	@BeforeClass
 	void accounts_id_weightedholdings() throws Exception
 	{
 		logger.info("*******Started TC002_accounts_id_weightedholdings*****");
 		//Response response;
 		
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
 		String s1=XLUtil.getCellData(path, "All_APIs", 4, 2);
 		String s3=XLUtil.getCellData(path, "All_APIs", 4, 3);
 		
@@ -48,7 +48,7 @@ public class TC002_accounts_id_weightedholdings extends TestBase {
 		
 
 		String responseBody=response.getBody().asString();
-		System.out.println("Reponse body is:"+responseBody);
+		//System.out.println("Reponse body is:"+responseBody);
 		Assert.assertTrue(responseBody!=null);
 		String responseString=response.asString();
 		
@@ -63,10 +63,10 @@ public class TC002_accounts_id_weightedholdings extends TestBase {
 			
 			XLUtil.setCellData(path, "Account_APIs", row, 3, responseString);
 			String s5=s2+RestUtils.empName();
-			String s6="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"_Weightedholdings.json";
+			String s6="C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"_Weightedholdings.json";
 		try {
 			
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"_Weightedholdings.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"_Weightedholdings.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();
@@ -105,11 +105,11 @@ public class TC002_accounts_id_weightedholdings extends TestBase {
 	void ExtractallData() throws Exception {
 		logger.info("********Extracting all parameters from response*******");
 		String responseString=response.asString();
-		/*String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
-		XLUtil.setExcelFile("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
+		/*String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
+		XLUtil.setExcelFile("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
 		XLUtil.setCellData(path, "Token", 2, 1, responseString);*/
 		try {
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc2.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc2.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();

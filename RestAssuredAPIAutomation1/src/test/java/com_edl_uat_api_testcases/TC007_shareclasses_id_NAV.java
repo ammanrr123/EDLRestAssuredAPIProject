@@ -16,14 +16,14 @@ import com_edl_api_testing.TestBase;
 import io.restassured.RestAssured;
 
 public class TC007_shareclasses_id_NAV extends TestBase {
-	String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
+	String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
 	@BeforeClass
 	void getShareclassdetail() throws Exception
 	{
 		logger.info("*******Started TC007_getShareclassdetail*****");
 		//Response response;
 		
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
 		String s1=XLUtil.getCellData(path, "All_APIs", 9, 2);
 		
 		String s3=XLUtil.getCellData(path, "All_APIs", 9, 3);
@@ -52,11 +52,11 @@ public class TC007_shareclasses_id_NAV extends TestBase {
 		if(statusCode==200) {
 		XLUtil.setCellData(path, "ShareClass_APIs", row, 3, responseString);
 		String s5=s2+RestUtils.empName();
-		String s6="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"NAV.json";
+		String s6="C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"NAV.json";
 		
 		try {
 			
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"NAV.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\"+s5+"NAV.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();
@@ -96,7 +96,7 @@ public class TC007_shareclasses_id_NAV extends TestBase {
 		String responseString=response.asString();
 	//	XLUtil.setCellData(path, "Token", 7, 1, responseString);
 		try {
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc7.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc7.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();

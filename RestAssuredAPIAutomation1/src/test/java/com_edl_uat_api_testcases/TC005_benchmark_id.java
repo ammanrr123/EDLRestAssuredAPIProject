@@ -15,14 +15,14 @@ import com_edl_api_testing.TestBase;
 import io.restassured.RestAssured;
 
 public class TC005_benchmark_id extends TestBase {
-	String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
+	String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
 	@BeforeClass
 	void getaccountBenchmark() throws Exception
 	{
 		logger.info("*******Started TC005_getaccountBenchmark*****");
 		//Response response;
 		
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases_UAT.xlsx";
 		String s1=XLUtil.getCellData(path, "All_APIs", 7, 2);
 		//String s2=XLUtil.getCellData(path, "Sheet2", 1, 0);
 		String s3=XLUtil.getCellData(path, "All_APIs", 7, 3);
@@ -36,7 +36,7 @@ public class TC005_benchmark_id extends TestBase {
 				.then().extract().response();
 		
 		String responseBody=response.getBody().asString();
-		System.out.println("Reponse body is:"+responseBody);
+		//System.out.println("Reponse body is:"+responseBody);
 		Assert.assertTrue(responseBody!=null);
 					
 		int statusCode=response.getStatusCode();
@@ -73,7 +73,7 @@ public class TC005_benchmark_id extends TestBase {
 		if(statuscode==200) {
 		//XLUtil.setCellData(path, "Token", 5, 1, responseString);
 		try {
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\abc5.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response_UAT\\abc5.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();

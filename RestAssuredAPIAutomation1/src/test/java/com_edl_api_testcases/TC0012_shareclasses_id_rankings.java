@@ -16,15 +16,15 @@ import com_edl_api_testing.TestBase;
 import io.restassured.RestAssured;
 
 public class TC0012_shareclasses_id_rankings extends TestBase {
-	String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
+	String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
 	@BeforeClass
 	void shareclasses_id_rankings() throws Exception
 	{
 		logger.info("*******Started TC0012_shareclasses_id_rankings*****");
 		//Response response;
 		
-		String path="C:\\Users\\ammanrr.CORP\\eclipse-workspace\\API_Test_Cases.xlsx";
-		XLUtil.setExcelFile("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
+		String path="C:\\Users\\ammanrr\\eclipse-workspace\\API_Test_Cases.xlsx";
+		XLUtil.setExcelFile("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredApiTesting.xlsx");
 		String s1=XLUtil.getCellData(path, "Sheet1", 14, 2);
 		
 		String s3=XLUtil.getCellData(path, "Sheet1", 14, 3);
@@ -53,7 +53,7 @@ public class TC0012_shareclasses_id_rankings extends TestBase {
 		XLUtil.setCellData(path, "Sheet4", row, 8, responseString);
 		try {
 			String s5=s2+RestUtils.empName();
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"rankings.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\"+s5+"rankings.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();
@@ -91,7 +91,7 @@ public class TC0012_shareclasses_id_rankings extends TestBase {
 		String responseString=response.asString();
 		//XLUtil.setCellData(path, "Sheet3", 12, 1, responseString);
 		try {
-			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr.CORP\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc12.json"));
+			PrintStream out =new PrintStream(new FileOutputStream("C:\\Users\\ammanrr\\eclipse-workspace\\RestAssuredAPIAutomation1\\Extracts_Response\\abc12.json"));
 			out.print(responseString);
 			out.flush();
 			out.close();
